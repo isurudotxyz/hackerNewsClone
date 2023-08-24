@@ -6,9 +6,7 @@ export default async function Stories(path) {
 
   view.innerHTML = `<div>${
     hasStories
-      ? stories
-          .map((story, index) => Story({ ...story, index: index + 1 }))
-          .join("")
+      ? stories.map((story, i) => Story({ ...story, index: i + 1 })).join(" ")
       : "No stories"
   } </div>`;
 }
