@@ -30,8 +30,8 @@ export default class RouterHandler {
 
     routes.forEach(({ path, page }) => {
       router
-        .on(route.path, () => {
-          route.page(route.path);
+        .on(path, () => {
+          page(path);
         })
         .resolve();
     });
